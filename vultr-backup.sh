@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Last modified 2025-02-25 by WG
-
 # Set variables
 dow=$(date +'%a')
 month=$(date +'%m')
