@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Executed daily via a symbolic link in /etc/cron.daily
-# Last modified 2023-05-29 by WG
+# Last modified 2025-02-25 by WG
 
 # Set variables
 dow=$(date +'%a')
