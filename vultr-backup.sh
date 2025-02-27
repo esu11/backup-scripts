@@ -17,7 +17,6 @@ rm $backupdir/daily/php/*.tar.gz
 rm $backupdir/daily/www/*.tar.gz
 rm $backupdir/daily/logs/*.tar.gz
 rm $backupdir/daily/cron/*.tar.gz
-rm $backupdir/daily/scripts/*.tar.gz
 # Create new Daily backups
 nice -n 19 tar zcvf $backupdir/daily/letsencrypt/letsencrypt_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /etc/letsencrypt
 nice -n 19 tar zcvf $backupdir/daily/apache2/apache2_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /etc/apache2
@@ -26,7 +25,6 @@ nice -n 19 tar zcvf $backupdir/daily/php/php_backup_$(date +'%Y-%m-%d_%H%M').tar
 nice -n 19 tar zcvf $backupdir/daily/www/www_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/www
 nice -n 19 tar zcvf $backupdir/daily/logs/logs_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/log/apache2
 nice -n 19 tar zcvf $backupdir/daily/cron/cron_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/spool/cron/crontabs
-nice -n 19 tar zcvf $backupdir/daily/scripts/scripts_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /home/esu11tech/scripts
 # Latest backups to Google Drive
 nice -n 19 rclone delete GDrive:/Latest
 nice -n 19 rclone copy $backupdir/daily/ GDrive:/Latest
