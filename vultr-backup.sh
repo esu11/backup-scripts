@@ -17,6 +17,7 @@ rm $backupdir/daily/php/*.tar.gz
 rm $backupdir/daily/www/*.tar.gz
 rm $backupdir/daily/logs/*.tar.gz
 rm $backupdir/daily/cron/*.tar.gz
+rm $backupdir/daily/home/*.tar.gz
 # Create new Daily backups
 nice -n 19 tar zcvf $backupdir/daily/letsencrypt/letsencrypt_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /etc/letsencrypt
 nice -n 19 tar zcvf $backupdir/daily/apache2/apache2_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /etc/apache2
