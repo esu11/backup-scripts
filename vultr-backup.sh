@@ -6,7 +6,7 @@ month=$(date +'%m')
 day=$(date +'%d')
 year=$(date +'%Y')
 isodate=$(date +'%Y-%m-%d')
-backupdir=/home/esu11tech/backups
+backupdir=/mnt/backups
 
 # Daily backup operation
 # Remove previous Daily backups
