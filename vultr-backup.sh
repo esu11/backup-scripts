@@ -25,6 +25,7 @@ nice -n 19 tar zcvf $backupdir/daily/php/php_backup_$(date +'%Y-%m-%d_%H%M').tar
 nice -n 19 tar zcvf $backupdir/daily/www/www_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/www
 nice -n 19 tar zcvf $backupdir/daily/logs/logs_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/log/apache2
 nice -n 19 tar zcvf $backupdir/daily/cron/cron_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /var/spool/cron/crontabs
+nice -n 19 tar zcvf $backupdir/daily/home/home_backup_$(date +'%Y-%m-%d_%H%M').tar.gz /home
 # Latest backups to Google Drive
 nice -n 19 rclone delete GDrive:/Latest
 nice -n 19 rclone copy $backupdir/daily/ GDrive:/Latest
