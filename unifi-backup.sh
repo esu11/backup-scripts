@@ -5,7 +5,7 @@ dow=$(date +'%a')
 month=$(date +'%m')
 day=$(date +'%d')
 year=$(date +'%Y')
-isodate=$year-$month-$day
+isodate=$(date +'%Y-%m-%d')
 latestbackup=/usr/lib/unifi/data/backup/autobackup/$(ls --ignore=*.json /usr/lib/unifi/data/backup/autobackup/ -Art | tail -n 1)
 
 # Daily backup operation
