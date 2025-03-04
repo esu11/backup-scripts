@@ -5,7 +5,7 @@ dow=$(date +'%a')
 month=$(date +'%m')
 day=$(date +'%d')
 year=$(date +'%Y')
-isodate=$year-$month-$day
+isodate=$(date +'%Y-%m-%d')
 latestbackup=/var/lib/automysqlbackup/latest/$(ls --ignore=sys* /var/lib/automysqlbackup/latest/ -Art | tail -n 1)
 
 # Daily backup operation
