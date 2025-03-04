@@ -24,6 +24,7 @@ if [[ ( $dow == "Sun" ) ]]; then
 rm $backupdir/weekly/*.conf
 nice -n 19 cp $backupdir/daily/*.conf $backupdir/weekly/
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Weekly
+
 fi
 
 # Monthly backup operation
