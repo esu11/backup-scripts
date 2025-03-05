@@ -7,7 +7,7 @@ day=$(date +'%d')
 year=$(date +'%Y')
 isodate=$(date +'%Y-%m-%d')
 
-# Rename backup file, then assign lastbackup variable
+# Rename backup file, then designate latestbackup
 mv /var/lib/3cxpbx/Instance1/Data/Backups/3CXScheduledBackup.zip /var/lib/3cxpbx/Instance1/Data/Backups/3CXScheduledBackup-$isodate.zip
 latestbackup=/var/lib/3cxpbx/Instance1/Data/Backups/3CXScheduledBackup-$isodate.zip
 
