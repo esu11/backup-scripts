@@ -6,7 +6,7 @@ month=$(date +'%m')
 day=$(date +'%d')
 year=$(date +'%Y')
 isodate=$(date +'%Y-%m-%d')
-backupdir=/home/radadmin/backups
+backupdir=/mnt/backups
 
 # Daily backup operation
 # Remove previous Daily backups
