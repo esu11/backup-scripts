@@ -28,6 +28,7 @@ if [[ ( $dow == "Sun" ) ]]; then
 rm $backupdir/weekly/*.tar.gz
 nice -n 19 tar zcvf $backupdir/weekly/print_backup_$(date +'%Y-%m-%d_%H%M').tar.gz $backupdir/daily
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Weekly
+
 fi
 
 # Monthly backup operation
