@@ -28,6 +28,7 @@ rm $backupdir/weekly/*.tar.gz
 nice -n 19 tar zcvf $backupdir/weekly/radius_backup_$(date +'%Y-%m-%d_%H%M').tar.gz $backupdir/daily
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Weekly
 nice -n 19 sh /etc/letsencrypt/renewal-hooks/post/certbotrenew.sh
+
 fi
 
 # Monthly backup operation
