@@ -16,6 +16,9 @@ rclone delete GDrive:/Latest
 rclone copy $latestbackup GDrive:/Latest
 rclone copy /root/.config/rclone/rclone.conf GDrive:
 
+# Remove files older than one week
+find /path/to/directory/ -mindepth 1 -mtime +7 -delete
+
 # Weekly backup operation
 if [[ ( $dow == "Sun" ) ]]; then
 
