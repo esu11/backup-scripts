@@ -7,7 +7,7 @@ SET DAY=%date:~7,2%
 SET YEAR=%date:~10,4%
 SET ISODATE=%YEAR%-%MONTH%-%DAY
 SET RCLONE="C:\Program Files\rclone\rclone.exe"
-LATESTBACKUP="C:\Net2 Access Control\Backup"
+SET LATESTBACKUP="C:\Net2 Access Control\Backup"
 
 REM Daily backup operation
 %RCLONE% delete GDrive:/Latest
