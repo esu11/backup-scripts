@@ -16,13 +16,13 @@ REM Daily backup operation
 REM Weekly backup operation
 IF %DOW%==Sun (goto WEEKLY) ELSE (goto MONTHLY)
 :WEEKLY
-%RCLONE% copy %LATESTBACKUP% GDrive:/Weekly/%ISDODATE%
+%RCLONE% copy %LATESTBACKUP% GDrive:/Weekly/%date:~10,4%-%date:~4,2%-%date:~7,2%
 
 REM Monthly backup operation
 :MONTHLY
 IF %DAY%==01 (goto NEXT) ELSE (goto END)
 :NEXT
-%RCLONE% copy %LATESTBACKUP% GDrive:/Monthly/%ISODATE%
+%RCLONE% copy %LATESTBACKUP% GDrive:/Monthly/%date:~10,4%-%date:~4,2%-%date:~7,2%
 %RCLONE% delete GDrive:/Weekly
 
 :END
