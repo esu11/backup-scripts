@@ -5,7 +5,7 @@ SET DOW=%date:~0,3%
 SET MONTH=%date:~4,2%
 SET DAY=%date:~7,2%
 SET YEAR=%date:~10,4%
-SET ISODATE=%YEAR%-%MONTH%-%DAY
+SET ISODATE=%YEAR%-%MONTH%-%DAY%
 SET RCLONE="C:\Program Files\rclone\rclone.exe"
 FOR /F "delims=|" %%I IN ('DIR "C:\ProgramData\Paessler\PRTG Network Monitor\Configuration Auto-Backups" /B /O:D') DO SET LATESTBACKUP="C:\ProgramData\Paessler\PRTG Network Monitor\Configuration Auto-Backups\%%I"
 
