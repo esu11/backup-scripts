@@ -5,7 +5,7 @@ SET DOW=%date:~0,3%
 SET MONTH=%date:~4,2%
 SET DAY=%date:~7,2%
 SET YEAR=%date:~10,4%
-SET ISODATE=%YEAR%-%MONTH%-%DAY
+SET ISODATE=%YEAR%-%MONTH%-%DAY%
 SET RCLONE="C:\Program Files\rclone\rclone.exe"
 SET LATESTBACKUP="C:\Net2 Access Control\Backup"
 
