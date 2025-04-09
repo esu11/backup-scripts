@@ -7,7 +7,7 @@ SET DAY=%date:~7,2%
 SET YEAR=%date:~10,4%
 SET ISODATE=%date:~10,4%-%date:~4,2%-%date:~7,2%
 SET RCLONE="C:\Program Files\rclone\rclone.exe"
-FOR /F "delims=|" %%I IN ('DIR "C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Backup" /B /O:D') DO SET LATESTBACKUP="C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Backup\%%I"
+SET LATESTBACKUP="C:\Users\Administrator\Desktop\Backups"
 
 REM Daily backup operation
 %RCLONE% delete GDrive:/Latest
