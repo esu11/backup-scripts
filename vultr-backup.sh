@@ -46,6 +46,9 @@ if [[ ( $day == "01" ) ]]; then
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Monthly
 nice -n 19 rclone delete GDrive:/Weekly
 
+# MySQL/MariaDB Optimizations
+sudo mysqlcheck --defaults-file=/etc/mysql/debian.cnf --auto-repair --optimize --all-databases
+
 fi
 
 # Yearly backup operation
