@@ -21,6 +21,8 @@ nice -n 19 cp $pcbackup $backupdir/daily/papercut/
 # Latest backups to Google Drive
 nice -n 19 rclone delete GDrive:/Latest
 nice -n 19 rclone copy $backupdir/daily/ GDrive:/Latest
+# Backs up rclone
+rclone copy /root/.config/rclone/rclone.conf GDrive:
 
 # Weekly backup operation
 if [[ ( $dow == "Sun" ) ]]; then
