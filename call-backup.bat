@@ -8,7 +8,7 @@ SET HEALTHCHECKS=""
 SET GITURL=""
 SET SCRIPT=""
 
-REM Healthchecks.io Verification
+REM Healthchecks.io verification
 curl %HEALTHCHECKS%
 
 REM Download latest backup script
