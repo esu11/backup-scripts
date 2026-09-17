@@ -38,6 +38,9 @@ rm $backupdir/weekly/*.tar.gz
 nice -n 19 tar zcvf $backupdir/weekly/esu11_vultr_backup_$(date +'%Y-%m-%d_%H%M').tar.gz $backupdir/daily
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Weekly
 
+# MySQL/MariaDB Optimizations
+sudo mysqlcheck --defaults-file=/etc/mysql/debian.cnf --auto-repair --optimize --all-databases
+
 fi
 
 # Monthly backup operation
@@ -45,9 +48,6 @@ if [[ ( $day == "01" ) ]]; then
 
 nice -n 19 rclone copy $backupdir/weekly/ GDrive:/Monthly
 nice -n 19 rclone delete GDrive:/Weekly
-
-# MySQL/MariaDB Optimizations
-sudo mysqlcheck --defaults-file=/etc/mysql/debian.cnf --auto-repair --optimize --all-databases
 
 fi
 
